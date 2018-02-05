@@ -1,6 +1,12 @@
 version: '2'
 
 services:
-  man:
+  web:
     build: .
-    imagge: aloha
+    image: aloha
+    ports:
+    - "8080:8080"
+    networks:
+    - webnet
+  networks:
+    webnet:
